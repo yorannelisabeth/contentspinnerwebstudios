@@ -1,0 +1,12 @@
+CREATE DATABASE test3;
+
+  use test3;
+
+  CREATE TABLE users (
+    id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    texte VARCHAR(3000) NOT NULL,
+    titre VARCHAR(150) NOT NULL,
+    
+    
+    date TIMESTAMP
+  );
