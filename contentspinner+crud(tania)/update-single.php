@@ -53,7 +53,7 @@ if (isset($_GET['id'])) {
 <?php echo escape($_POST['titre']); ?> successfully updated.
 <?php endif;?>
 
-<h2>Edit a user</h2>
+<h2>mettre à jour le contenu</h2>
 
 <form method="post">
   <?php foreach ($user as $key => $value): ?>

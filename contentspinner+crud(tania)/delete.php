@@ -39,9 +39,11 @@ try {
 
 <?php require "formatpage/header.php";?>
 <div class="update">
-  <h2>Delete users</h2>
+  <h2>Supprimer du contenu</h2>
   <?php if ($success) {
             echo $success;
+        }else{
+          echo "en attente de suppression";
         }
   ?>
 

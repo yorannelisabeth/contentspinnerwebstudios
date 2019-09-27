@@ -59,9 +59,10 @@ a{
 }
 
 body{
-  /*background: url(../assets/wordpress\ techno2\ -\ Copie.jpg) center no-repeat  ;*/
-  background: black;
+  background: url(../assets/wordpress\ techno2\ -\ Copie.jpg) center no-repeat  ;
+  background: black; 
   background-size: 150vh;
+  
 }
 
 .partie{
@@ -74,9 +75,7 @@ body{
   height:100px;  
 }
 
-html{
-  background-color: black;
-}
+
 
 li{
   color: white;
@@ -100,8 +99,9 @@ border: 1px solid white;
 }
 
 h2,th,tr,td{
-  color:black;
+  color:white;
 }
 .update{
-  background-color:black;
+  
+  color:white;
 }

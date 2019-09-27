@@ -19,7 +19,7 @@
 
   <body>
     <div class="container-fluid">
-        <div class="titre offset-3 col-6">
+        <div class="titre offset-3 col-7">
           <h1 class="ml1">
             <span class="text-wrapper">
             <span class="line line1"></span>

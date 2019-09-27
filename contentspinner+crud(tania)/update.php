@@ -17,7 +17,7 @@ try {
 ?>
 <?php require "formatpage/header.php";?>
 <div class="update">
-  <h2>Update users</h2>
+  <h2>Mettre à jour le contenu</h2>
   <table>
     <thead>
       <tr>

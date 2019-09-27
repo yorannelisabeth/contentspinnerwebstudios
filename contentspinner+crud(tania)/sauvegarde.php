@@ -34,7 +34,8 @@ function process($param_txt){
 
     $populationdata = file_get_contents('population-francaise-par-departement-2018.json');
     $myfile = json_decode($populationdata, true);
-
+    $cities = file_get_contents('cities.json');
+    $doc = json_decode($cities, true);
     foreach ($myfile as $record) {
         $name = $record['fields']['departement'];
         $size = count($myfile);
@@ -65,6 +66,8 @@ function process($param_txt){
         }
     
     }
+
+   
 }
 
 // process();
@@ -75,4 +78,6 @@ if( isset($_POST["submit"])){
 }?>
 <a href="index.php">retour à l'acceuil </a>
 
+
+Hello wilders 
 

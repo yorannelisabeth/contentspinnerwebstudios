@@ -6,8 +6,8 @@
 <div class="smallblock container-fluid ">
     <h3 class="createtitle offset-2">Votre texte</h3>
     <div class="offset-2">
-       <!-- <form method="post" action="sauvegarde.php">-->
-       <form method="post" action="alldata.php">
+        <form method="post" action="sauvegarde3.php">
+       
             <br />
             <label for="texte" class="createtitle">collez votre texte ici:</label>
             <textarea id="textarea"  name="texte" rows="8" class="area  offset-2 col-8">
@@ -20,5 +20,9 @@
 </div>
 <a href="index.php">Back to home</a>
 
-<?php include "formatpage/footer.php";?>
+<?php include "formatpage/footer.php";
+
+
+
+?>
 

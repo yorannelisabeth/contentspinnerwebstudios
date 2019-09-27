@@ -1,5 +1,5 @@
 
-<?php
+<?php/*
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
@@ -63,7 +63,7 @@ if (!$conn) {
                 //echo $ville ." ==> ". $codepostale." ==> ".$departementname." ==> ".$codedepartement."<br>";
             }    
 
-?>
+*/?>
 <!--
 hello everyone actually i have multiple table in my database and 
 i wanted to get several element from both table and link them in a special way , 
