@@ -34,15 +34,18 @@
       ini_set('memory_limit','2048M');
       ini_set('max_execution_time', 300);
       set_time_limit(300);
-      $populationdata = file_get_contents('villes_france_free_final.json');
+      $populationdata = file_get_contents('villesdata.json');
       $myfile = json_decode($populationdata, true);
    
       foreach ($myfile as $record) {
-         $name = $record['ville_nom'];
+        $name = $record['ville_nom'];
          $population = $record['ville_population_2012'];
          $area = $record['ville_surface'];
          $zipCode = $record['ville_code_postal'];
          $departmentCode = $record['ville_densite_2010'];
+         $departement = $record['field']['departement'];
+         $codeDepartement = $record['field']['code_departement'];
+ 
          $size2 = count($name);
    
                for ($i = 0; $i <= $size2 - 1; $i++) {
@@ -51,8 +54,8 @@
                   $variable = $_POST['texte'];
                   $spinvariable = spin($variable);
 
-                  $search = array(":ville",":population",":surface",":codepostale",":codedepartement"); 
-                  $replacers = array($name,$population,$area,$zipCode,$departmentCode);
+                  $search = array(":ville",":population",":surface",":codepostale",":codedepartement",":departement"); 
+                  $replacers = array($name,$population,$area,$zipCode,$departmentCode,$departement);
                   
                   $txt = str_replace($search, $replacers, $spinvariable );
                   echo $txt, '<br />';
