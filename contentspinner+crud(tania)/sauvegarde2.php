@@ -34,21 +34,18 @@ function process($param_txt)
     ini_set('memory_limit', '2048M');
     ini_set('max_execution_time', 300);
     set_time_limit(300);
-    $region = file_get_contents('population-francaise-par-departement-2018.json');
-    $docregion = json_decode($region, true);
-    $cities = file_get_contents('cities.json');
-    $doccities = json_decode($cities, true);
+    $franceDatabase = file_get_contents('ville_departement_france.json');
+    $database = json_decode($franceDatabase, true);
+  
 
-    foreach ($docregion as $getdata) {
-        $departement = $getdata['field']['departement'];
-        $codeDepartement = $getdata['field']['code_departement'];
-
-        foreach ($doccities as $data) {
-            $zipcode = $data['zip_code'];
+    foreach ($database as $data) {
+       
+            $zipcode = $data['ville_code_postal'];
             $ville = $data['ville_nom_simple'];
-            $citydepartment = ['ville_departement'];
+            $citydepartment = $data['ville_departement'];
+            $departement=$data['departement'];
             $size = count($ville);
-            if ($codeDepartement === $citydepartment) {
+        
 
                 for ($i = 0; $i <= $size - 1; $i++) {
 
@@ -63,7 +60,7 @@ function process($param_txt)
                         echo $txt2, '<br />';
 
                         $con = getDatabaseConnexion();
-                        $sql = "INSERT INTO users (texte, titre) VALUES ('$txt2')";
+                        $sql = "INSERT INTO users (texte, titre) VALUES ('$txt2','$ville')";
                         $con->exec($sql);
                     } catch (PDOException $e) {
                         echo $sql . "<br>" . $e->getMessage();
@@ -73,9 +70,9 @@ function process($param_txt)
                 }
 
             }
-        }
+        
 
-    }
+    
 
 }
 

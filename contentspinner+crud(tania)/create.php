@@ -6,7 +6,7 @@
 <div class="smallblock container-fluid ">
     <h3 class="createtitle offset-2">Votre texte</h3>
     <div class="offset-2">
-        <form method="post" action="sauvegarde3.php">
+        <form method="post" action="sauvegarde2.php">
        
             <br />
             <label for="texte" class="createtitle">collez votre texte ici:</label>
